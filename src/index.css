@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary-teal: #14B8A6;
+  --color-dark-navy: #1A1A2E;
+  --color-coral-accent: #FF8E72;
+  --font-sans: "Inter", sans-serif;
+  --font-display: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1A1A2E;
+}
+::-webkit-scrollbar-thumb {
+  background: #14B8A6;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0d9488;
+}
+
+/* Custom animation utility */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* CSS gradient vector mountains landscape */
+.hero-bg-gradients {
+  background: linear-gradient(135deg, #1A1A2E 0%, #0f3443 50%, #14B8A6/10 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle glowing backdrop dots */
+.grid-bg-overlay {
+  background-image: radial-gradient(rgba(20, 184, 166, 0.1) 1.5px, transparent 1.5px);
+  background-size: 32px 32px;
+}
+
+/* Frosted Glass Utilities */
+.glass-nav {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background-color: rgba(26, 26, 46, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-card {
+  background-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.glass-card:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(20, 184, 166, 0.3);
+}
+
+.glass-card-light {
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.glass-card-light:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-color: rgba(20, 184, 166, 0.25);
+}
+
+.glow-blob-coral {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  background-color: rgba(255, 142, 114, 0.15);
+  border-radius: 9999px;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glow-blob-teal {
+  position: absolute;
+  width: 256px;
+  height: 256px;
+  background-color: rgba(20, 184, 166, 0.15);
+  border-radius: 9999px;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+
